@@ -11,6 +11,6 @@ class window.HandView extends Backbone.View
     @$el.children().detach()
     @$el.html @template @collection
     @$el.append @collection.map (card) ->
-      new CardView(model: card).$el
+      new CardView(model: card).$el.hide().fadeIn().slideDown()
     @$('.score').text @collection.scores()[0]
 
